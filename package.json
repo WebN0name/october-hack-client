@@ -2,6 +2,7 @@
   "name": "october-hack-client",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/table",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

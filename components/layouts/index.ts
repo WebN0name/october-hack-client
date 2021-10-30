@@ -16,6 +16,7 @@ export const ControllButton = styled(Button)`
   border-radius: 50%;
   width: 60px;
   height: 60px;
+  position: absolute;
   transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   &:hover {
     background-color: rgba(25, 118, 210, 0.04);

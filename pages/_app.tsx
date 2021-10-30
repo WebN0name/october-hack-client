@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Title>DED TRAIDING</Title>
           </HeaderTitle>
       </HeaderWrapper>
-      <Component {...pageProps} />
+      <Component {...pageProps} base="/table"/>
     </Wrapper>
   )
 }

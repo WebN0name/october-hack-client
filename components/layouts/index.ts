@@ -144,5 +144,38 @@ export const DropdownItem = styled.div`
   }
 `
 
+export const TableBody = styled.table`
+    width: 40%;
+	border: none;
+	margin-bottom: 20px;
+	border-collapse: separate;  
+    text-align: center;
+    border-spacing: 5px;
+    border-radius: 20px;  
+`
+
+export const TableHeader = styled.th`
+    font-weight: bold;
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+    background: black;
+	font-size: 14px;
+	border-top: 1px solid #ddd;
+    color: white;
+`
+export const TableData = styled.td`
+    text-align: left;
+	border: none;
+	padding: 10px 15px;
+	font-size: 14px;
+    background: #EDEDED;
+	vertical-align: top;
+    &:hover {
+    background-color: black;
+    color: white;
+  }
+`
+
 
 

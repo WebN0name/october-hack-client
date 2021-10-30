@@ -1,7 +1,12 @@
-export default function Home() {
+import {PageWrapper, PickerContainer} from '../components/layouts'
+import SymbolPicker from '../components/Smart/SymbolPicker'
+
+export default function Table() {
   return (
-    <div>
-      Page table
-    </div>
+    <PageWrapper>
+      <PickerContainer>
+        <SymbolPicker text = {'Choose symbol: '}/>
+      </PickerContainer>
+    </PageWrapper>
   )
 }

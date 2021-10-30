@@ -7,7 +7,7 @@ import SideBarContext from "../components/context/sidebarContext"
 import { useState } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [sidebar, setSidebar] = useState(true)
+  const [sidebar, setSidebar] = useState(false)
   return (
     <SideBarContext.Provider value={{ sidebar, setSidebar }}>
       <Wrapper>

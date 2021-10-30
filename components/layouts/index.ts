@@ -21,7 +21,7 @@ export const Title = styled.h1`
     line-height: 1.5;
     letter-spacing: 0.0075em;
     white-space: nowrap;
-    color: black;
+    color: rgba(0, 0, 0, 0.87);
 `
 
 export const HeaderWrapper = styled.div`
@@ -31,11 +31,13 @@ export const HeaderWrapper = styled.div`
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
+    background-color: #1976d2;
 `
 export const PageWrapper = styled.div`
   width: 100%;
   height: calc(100vh - 85px);
   background-color: #fafafa;
+  padding: 20px;
 `
 
 export const SidebarLayout = styled.div.attrs((props) => ({
@@ -65,7 +67,7 @@ export const SidebarBody = styled.div.attrs((props) => ({
     transform: translateX(0%);
     transition: transform 0.3s ease-out 0.3s;
   }
-
+  padding-top: 20px;
   position: fixed;
   min-width: 240px;
   height: 100%;
@@ -88,6 +90,58 @@ export const CloseSidebarArea = styled.div`
   justify-content: flex-end;
   margin-bottom: 30px;
   padding-right: 10px;
+`
+
+export const PickerContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const DropdownBtn = styled.div`
+  background-color: rgb(21, 101, 192);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-left: 30px;
+  min-width: 160px;
+  text-align: center;
+`
+
+export const DropdownContent = styled.div`
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 30px;
+  text-align: center;
+  max-height: 90px;
+  overflow-y: auto;
+  scrollbar-width: none;
+`
+
+export const Dropdown = styled.div`
+  position: relative;
+  display: inline-block;
+  &:hover ${DropdownContent}{
+    display: block;
+  }
+`
+
+export const DropdownItem = styled.div`
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  &:hover {
+    background-color: #f1f1f1;
+  }
 `
 
 

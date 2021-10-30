@@ -5,14 +5,14 @@ const Button = styled.div`
 `
 
 export const ControllButton = styled(Button)`
-  color: #000;
+  color: rgba(0, 0, 0, 0.87);
   text-align: center;
   border-radius: 50%;
   width: 60px;
   height: 60px;
   transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   &:hover {
-    background-color: rgba(25, 118, 210, 0.04);
+    background-color: rgba(0, 0, 0, 0.04);
   }
 `
 
@@ -20,8 +20,8 @@ export const ControllButton = styled(Button)`
 export const NavButton = styled(Button)`
   border-radius: 5px;
   text-align: center;
-  color: #000;
-  background-color: rgba(25, 118, 210, 0.04);
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(21, 101, 192);
   cursor: pointer;
 
   & + & {

@@ -1,16 +1,26 @@
-// import type { NextPage } from 'next'
-// import Head from 'next/head'
-// import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
-import { useEffect } from "react"
-import { Wrapper } from "../components/layouts"
+import { 
+  Wrapper,
+  Header, 
+  TitleText,
+  ControllButton,
+  HeaderTitle
+  } from "../components/layouts"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home(){
 
 
   return (
     <Wrapper>
-      111111
+      <Header>
+        <ControllButton>
+          <FontAwesomeIcon icon={faBars} size = "2x" />
+        </ControllButton>
+        <HeaderTitle>
+          <TitleText>DED TRADING</TitleText>
+        </HeaderTitle>
+      </Header>
     </Wrapper>
   )
 }

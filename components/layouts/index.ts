@@ -35,7 +35,7 @@ export const HeaderWrapper = styled.div`
 `
 export const PageWrapper = styled.div`
   width: 100%;
-  height: calc(100vh - 85px);
+  min-height: calc(100vh - 85px);
   background-color: #fafafa;
   padding: 20px;
 `
@@ -145,7 +145,7 @@ export const DropdownItem = styled.div`
 `
 
 export const TableBody = styled.table`
-    width: 40%;
+    width: 50%;
 	border: none;
 	margin-bottom: 20px;
 	border-collapse: separate;  
@@ -161,6 +161,8 @@ export const TableHeader = styled.th`
 	padding: 10px 15px;
     background: black;
 	font-size: 14px;
+  height: 40px;
+  overflow: hidden;
 	border-top: 1px solid #ddd;
     color: white;
 `
@@ -175,6 +177,18 @@ export const TableData = styled.td`
     background-color: black;
     color: white;
   }
+`
+
+export const TableDataCenter = styled(TableData)`
+    text-align: center;
+`
+
+export const TableContainer = styled.div`
+  width: 100%;
+  min-height: calc(100vh - 178px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 

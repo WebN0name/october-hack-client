@@ -30,6 +30,14 @@ export const HeaderTitle = styled.div`
 
 export const Title = styled.h1`
     margin: 0;
+    font-family: Zapf Chancery, cursive;
+    font-stretch: condensed;
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.5;
+    letter-spacing: 0.0075em;
+    white-space: nowrap;
+    color: black;
 `
 
 export const HeaderWrapper = styled.div`

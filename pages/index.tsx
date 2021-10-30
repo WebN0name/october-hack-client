@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <Wrapper>
-      11111
+      Ты пидор
     </Wrapper>
   )
 }

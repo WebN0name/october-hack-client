@@ -2,49 +2,40 @@ import styled from 'styled-components'
 
 
 export const Wrapper = styled.div`
-    min-width: 100vw;
     min-height: 100vh;
+    max-width: 100%;
+`
+
+const Button = styled.div`
+  padding: 15px;
+`
+
+export const ControllButton = styled(Button)`
+  color: #000;
+  text-align: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  &:hover {
+    background-color: rgba(25, 118, 210, 0.04);
+  }
+`
+
+export const HeaderTitle = styled.div`
+    width: 100%;
+    text-align: center;
+`
+
+export const Title = styled.h1`
+    margin: 0;
+`
+
+export const HeaderWrapper = styled.div`
+    width: 100%;
+    min-height: 85px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
 `
-
-export const Container = styled.div`
-    width: 800px;
-    height: 500px;
-    border: 2px solid black;
-    padding: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-`
-
-const Block = styled.div`
-    border: 1px solid black;
-    width: 100%;
-    height: 100%;
-`
-
-export const Red = styled(Block)`
-    background-color: red;
-    width: 200px;
-    height: 80px;
-`
-
-export const Green = styled(Block)`
-    background-color: green;
-    width: 130px;
-    height: 60px;
-`
-
-export const Blue = styled(Block)`
-    background-color: blue;
-    width: 200px;
-    height: 60px;
-`
-
-export const Yellow = styled(Block)`
-    background-color: yellow;
-    width: 130px;
-    height: 60px;
-`
-

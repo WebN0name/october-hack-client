@@ -1,22 +1,21 @@
 import "../styles/globals.css"
 import type { AppProps } from "next/app"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars } from "@fortawesome/free-solid-svg-icons"
-import { Wrapper, HeaderWrapper, ControllButton, HeaderTitle, Title } from "../components/layouts"
+import { Wrapper } from "../components/layouts"
+import Header from '../components/Smart/Header'
+import Sidebar from '../components/Smart/Sidebar'
+import SideBarContext from "../components/context/sidebarContext"
+import { useState } from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [sidebar, setSidebar] = useState(true)
   return (
-    <Wrapper>
-      <HeaderWrapper>
-          <ControllButton>
-            <FontAwesomeIcon icon={faBars} size="2x" />
-          </ControllButton>
-          <HeaderTitle>
-            <Title>DED TRAIDING</Title>
-          </HeaderTitle>
-      </HeaderWrapper>
-      <Component {...pageProps} base="/table"/>
-    </Wrapper>
+    <SideBarContext.Provider value={{ sidebar, setSidebar }}>
+      <Wrapper>
+        <Sidebar />
+        <Header />
+        <Component {...pageProps} base="/table" />
+      </Wrapper>
+    </SideBarContext.Provider>
   )
 }
 

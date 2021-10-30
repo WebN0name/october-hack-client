@@ -6,22 +6,6 @@ export const Wrapper = styled.div`
     max-width: 100%;
 `
 
-const Button = styled.div`
-  padding: 15px;
-`
-
-export const ControllButton = styled(Button)`
-  color: #000;
-  text-align: center;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  &:hover {
-    background-color: rgba(25, 118, 210, 0.04);
-  }
-`
 
 export const HeaderTitle = styled.div`
     width: 100%;
@@ -53,3 +37,58 @@ export const PageWrapper = styled.div`
   height: calc(100vh - 85px);
   background-color: #fafafa;
 `
+
+export const SidebarLayout = styled.div.attrs((props) => ({
+  className: props.className,
+}))`
+  &.active {
+    transform: translateX(0%);
+    transition: transform 0.3s ease-out 0.3s;
+  }
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 10px -5px, rgba(0, 0, 0, 0.14) 0px 16px 24px 2px,
+    rgba(0, 0, 0, 0.12) 0px 6px 30px 5px;
+  z-index: 5;
+  bottom: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out 0.3s;
+`
+
+export const SidebarBody = styled.div.attrs((props) => ({
+  className: props.className,
+}))`
+  &.active {
+    transform: translateX(0%);
+    transition: transform 0.3s ease-out 0.3s;
+  }
+
+  position: fixed;
+  min-width: 240px;
+  height: 100%;
+  background-color: #fff;
+  z-index: 10;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out 0.3s;
+  z-index: 10;
+`
+
+export const NavListcontainer = styled.div`
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+`
+
+export const CloseSidebarArea = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  padding-right: 10px;
+`
+
+
+

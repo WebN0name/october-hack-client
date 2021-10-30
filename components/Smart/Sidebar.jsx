@@ -2,22 +2,32 @@ import { SidebarLayout, SidebarBody, CloseSidebarArea, NavListcontainer } from "
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ControllButton, NavButton } from "../ui"
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons"
-import { useHistory } from "react-router"
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
+import { useRouter } from 'next/router'
 import SideBarContext from "../context/sidebarContext"
+import Image from 'next/image'
+import ded from '../../public/img/Ded.png'
 
 export default function Sidebar() {
-  const history = useHistory()
+  const router = useRouter()
   const { sidebar, setSidebar } = useContext(SideBarContext)
 
   const NavBtnClick = (e) => {
     setSidebar(() => !sidebar)
-    history.push(`/${e.target.id}`)
+    router.push(`/${e.target.id}`)
   }
+
+  useEffect(() => {
+    console.log(sidebar)
+  }, [sidebar])
 
   return (
     <>
-      <SidebarLayout onClick={() => setSidebar(!sidebar)} className={!sidebar ? "" : "active"}></SidebarLayout>
+      <SidebarLayout onClick={() => setSidebar(!sidebar)} className={!sidebar ? "" : "active"}>
+        <div style = {{transform: 'rotate(60deg)', width: 400, height: 400, position: 'relative', left: '108px'}}>
+          <Image src={ded} alt="Picture of the author" />
+        </div>
+      </SidebarLayout>
       <SidebarBody className={!sidebar ? "" : "active"}>
         <CloseSidebarArea>
           <ControllButton onClick={() => setSidebar(!sidebar)}>

@@ -4,7 +4,6 @@ import axios from 'axios'
 import { useState } from 'react'
 
 export default function Table() {
-  // const prices = [{ name: "binance", price: 123 }, { name: "binance", price: 123 }, { name: "binance", price: 123 }, { name: "binance", price: 123 }, { name: "binance", price: 123 }, { name: "binance", price: 123 }, { name: "binance", price: 123 }, { name: "binance", price: 123 }]
   const [price, setPrice] = useState([])
   const getDataFromPeaker = async (value :  string) => {
     const data = await axios.post('/api/getDataForTable', {Symbol: value})

@@ -1,17 +1,20 @@
-// import type { NextPage } from 'next'
-// import Head from 'next/head'
-// import Image from 'next/image'
-// import styles from '../styles/Home.module.css'
-import { useEffect } from "react"
-import { Wrapper } from "../components/layouts"
+import { useEffect, useState } from "react"
+import { Wrapper, Container, Red, Blue, Yellow, Green } from "../components/layouts"
 
-export default function Home(){
+export default function Home() {
+  const [data, setData] = useState([])
 
+  useEffect(() => {
+    async function getData() {
+      let data = fetch("api/getDataFromBinance")
+      console.log(data)
+    }
+    getData()
+  }, [])
 
   return (
     <Wrapper>
-      111111
+      11111
     </Wrapper>
   )
 }
-

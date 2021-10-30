@@ -1,4 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+// https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {

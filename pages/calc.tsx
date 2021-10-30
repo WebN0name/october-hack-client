@@ -1,3 +1,5 @@
+import { PageWrapper } from '../components/layouts'
+
 export default function Calc() {
-  return <div>calc</div>
+  return <PageWrapper>calc</PageWrapper>
 }

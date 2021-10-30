@@ -48,3 +48,8 @@ export const HeaderWrapper = styled.div`
     padding-left: 20px;
     padding-right: 20px;
 `
+export const PageWrapper = styled.div`
+  width: 100%;
+  height: calc(100vh - 85px);
+  background-color: #fafafa;
+`

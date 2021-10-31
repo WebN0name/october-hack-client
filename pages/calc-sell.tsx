@@ -3,6 +3,8 @@ import { BuyButton, TextInfo } from '../components/ui'
 import SymbolPicker from '../components/Smart/SymbolPicker'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons"
 
 export default function CalcBuy() {
   const [inputData, setInputData] = useState('')
@@ -31,7 +33,7 @@ export default function CalcBuy() {
   return (
     <PageWrapper>
       <PickerContainer>
-        <SymbolPicker text={'Choose symbol: '} getDataFromPeaker={getDataFromPeaker} />
+        <SymbolPicker text={'Choose trade paire: '} getDataFromPeaker={getDataFromPeaker} />
         <InputCount placeholder={'Token count'} onChange={(e) => setInputData(() => e.target.value)} />
         <BuyButton onClick={() => Buy()}>Sell</BuyButton>
       </PickerContainer>
@@ -46,7 +48,7 @@ export default function CalcBuy() {
                   <TextInfo>Maximum discount: {100 - ((Number(reqData.price) / (Number(reqData.bids[0].price) * Number(reqData.amount))) * 100)}%</TextInfo>
                 </div>
                 <TextInfo>Amount: {reqData.amount}</TextInfo>
-                <TextInfo>Completed: {reqData.completed ? 'true' : 'false'}</TextInfo>
+                <TextInfo>Completed: {reqData.completed ? (<FontAwesomeIcon icon={faCheck} size = "lg" style = {{color: 'green'}}/>) : (<FontAwesomeIcon icon={faTimes} size = "lg" style = {{color: 'red'}}/>)}</TextInfo>
                 <TextInfo>AVG Price per unit: {reqData.avgPrice}</TextInfo>
               </InfoBlock>
               <TableContainerBuy>

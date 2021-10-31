@@ -14,7 +14,7 @@ export default function Table() {
   return (
     <PageWrapper>
       <PickerContainer>
-        <SymbolPicker text={'Choose symbol: '} getDataFromPeaker={getDataFromPeaker} />
+        <SymbolPicker text={'Choose trade paire: '} getDataFromPeaker={getDataFromPeaker} />
       </PickerContainer>
       <TableContainer>
         {

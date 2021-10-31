@@ -1,9 +1,19 @@
 import styled from 'styled-components'
 
+const global = styled.body`
+
+`
 
 export const Wrapper = styled.div`
     min-height: 100vh;
     max-width: 100%;
+    &.sidebar {
+    background-color: red;
+    overflow-y: hidden;
+    ${global}{
+      overflow-y: hidden;
+    }
+  }
 `
 
 
@@ -33,6 +43,7 @@ export const HeaderWrapper = styled.div`
     padding-right: 20px;
     background-color: #1976d2;
 `
+
 export const PageWrapper = styled.div`
   width: 100%;
   min-height: calc(100vh - 85px);
@@ -190,7 +201,7 @@ export const TableDataCenter = styled(TableData)`
 
 export const TableContainer = styled.div`
   width: 100%;
-  min-height: calc(100vh - 178px);
+  min-height: calc(100vh - 181px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,7 +243,7 @@ export const InputCount = styled.input`
 
 export const PageContent = styled.div`
   width: 100%;
-  min-height: calc(100vh - 178px);
+  min-height: calc(100vh - 181px);
 `
 
 export const InfoBlock = styled.div`
@@ -240,6 +251,7 @@ export const InfoBlock = styled.div`
   display: flex;
   justify-content: space-around;
   padding: 30px;
+  align-items: center;
 `
 
 export const TableContainerBuy = styled.div`

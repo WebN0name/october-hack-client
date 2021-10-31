@@ -1,5 +1,5 @@
-import { PageWrapper, PickerContainer, InputCount, PageContent, InfoBlock, TableBody, TableHeader, TableData, TableDataCenter, TableContainerBuy } from '../components/layouts'
-import { BuyButton } from '../components/ui'
+import { PageWrapper, PickerContainer, InputCount, PageContent, InfoBlock, TableBody, TableHeader, TableDataCenter, TableContainerBuy } from '../components/layouts'
+import { BuyButton, TextInfo } from '../components/ui'
 import SymbolPicker from '../components/Smart/SymbolPicker'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -40,10 +40,14 @@ export default function CalcBuy() {
           Object.keys(reqData).length !== 0 ? (
             <>
               <InfoBlock>
-                <p>Price: {reqData.price}</p>
-                <p>Amount: {reqData.amount}</p>
-                <p>Completed: {reqData.completed ? 'true' : 'false'}</p>
-                <p>AVG Price: {reqData.avgPrice}</p>
+                <div>
+                  <TextInfo>Price: {reqData.price}</TextInfo>
+                  <TextInfo>Expected Price: {Number(reqData.asks[0].price) * Number(reqData.amount)}</TextInfo>
+                  <TextInfo>Maximum overhead: {100 - ((Number(reqData.asks[0].price) * Number(reqData.amount)) / (Number(reqData.price)) * 100)}%</TextInfo>
+                </div>
+                <TextInfo>Amount: {reqData.amount}</TextInfo>
+                <TextInfo>Completed: {reqData.completed ? 'true' : 'false'}</TextInfo>
+                <TextInfo>AVG Price per unit: {reqData.avgPrice}</TextInfo>
               </InfoBlock>
               <TableContainerBuy>
                 <TableBody>

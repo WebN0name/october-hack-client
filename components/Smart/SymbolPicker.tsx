@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { DropdownBtn, Dropdown, DropdownContent, DropdownItem, InputSearch, SearchContent } from '../layouts'
+import { TextInfo } from "../ui"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
 import axios from 'axios'
@@ -43,7 +44,7 @@ export default function SymbolPicker({ text, getDataFromPeaker }: any) {
     }, [defaultSymbol])
     return (
         <>
-            {text}
+            <TextInfo>{text}</TextInfo>
             <Dropdown className={searchMode ? 'search' : ''}>
                 <DropdownBtn>
                     {searchMode === false ? defaultSymbol : <InputSearch placeholder={'Search'} onChange={(e) => Search(e)} />}

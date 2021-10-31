@@ -53,4 +53,10 @@ export const BuyButton = styled(Button)`
   }
 `
 
+export const TextInfo = styled.p`
+    font-size: 17px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.87)
+`
+
 

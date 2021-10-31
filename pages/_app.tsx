@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [sidebar, setSidebar] = useState(false)
   return (
     <SideBarContext.Provider value={{ sidebar, setSidebar }}>
-      <Wrapper>
+      <Wrapper className = {sidebar ? 'sidebar' : ''}>
         <Sidebar />
         <Header />
         <Component {...pageProps} base="/table" />

@@ -2,7 +2,7 @@ import { SidebarLayout, SidebarBody, CloseSidebarArea, NavListcontainer } from "
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { ControllButton, NavButton } from "../ui"
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons"
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { useRouter } from 'next/router'
 import SideBarContext from "../context/sidebarContext"
 import Image from 'next/image'

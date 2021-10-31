@@ -38,8 +38,11 @@ export default function Sidebar() {
           <NavButton id="table" backgroundColor="#ffeb3b" onClick={(e) => NavBtnClick(e)}>
             Table
           </NavButton>
-          <NavButton id="calc" backgroundColor="#ffeb3b" onClick={(e) => NavBtnClick(e)}>
-            Calculator
+          <NavButton id="purchaseCalc" backgroundColor="#ffeb3b" onClick={(e) => NavBtnClick(e)}>
+            Purchase calculator
+          </NavButton>
+          <NavButton id="salesCalc" backgroundColor="#ffeb3b" onClick={(e) => NavBtnClick(e)}>
+            Sales Calculator
           </NavButton>
         </NavListcontainer>
       </SidebarBody>

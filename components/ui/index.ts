@@ -34,4 +34,23 @@ export const NavButton = styled(Button)`
   }
 `
 
+export const BuyButton = styled(Button)`
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    min-width: 80px;
+  background-color: rgb(21, 101, 192);
+  margin-left: 80px;
+  cursor: pointer;  
+
+  & + & {
+    margin-top: 20px;
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+`
+
 

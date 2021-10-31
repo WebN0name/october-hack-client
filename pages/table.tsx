@@ -10,6 +10,7 @@ export default function Table() {
     setPrice(data.data.data.data)
 
   }
+  
   return (
     <PageWrapper>
       <PickerContainer>

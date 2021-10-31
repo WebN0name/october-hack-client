@@ -221,5 +221,34 @@ export const SearchContent = styled.div`
   scrollbar-width: none;
 `
 
+export const InputCount = styled.input`
+  height: 53px;
+  outline: none;
+  margin-left: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  padding-left: 15px;
+`
+
+export const PageContent = styled.div`
+  width: 100%;
+  min-height: calc(100vh - 178px);
+`
+
+export const InfoBlock = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+`
+
+export const TableContainerBuy = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+`
+
+
 
 

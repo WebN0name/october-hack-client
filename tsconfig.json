@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "pages/calc-sendtsx"  ],
   "exclude": [
     "node_modules"
   ]

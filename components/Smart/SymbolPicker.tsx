@@ -36,6 +36,10 @@ export default function SymbolPicker({ text, getDataFromPeaker }: any) {
 
     useEffect(() => {
         getDataFromPeaker(defaultSymbol)
+    }, [])
+
+    useEffect(() => {
+        getDataFromPeaker(defaultSymbol)
     }, [defaultSymbol])
     return (
         <>

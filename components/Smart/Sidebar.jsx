@@ -17,10 +17,6 @@ export default function Sidebar() {
     router.push(`/${e.target.id}`)
   }
 
-  useEffect(() => {
-    console.log(sidebar)
-  }, [sidebar])
-
   return (
     <>
       <SidebarLayout onClick={() => setSidebar(!sidebar)} className={!sidebar ? "" : "active"}>
@@ -38,8 +34,11 @@ export default function Sidebar() {
           <NavButton id="table"  onClick={(e) => NavBtnClick(e)}>
             Table
           </NavButton>
-          <NavButton id="calc" onClick={(e) => NavBtnClick(e)}>
-            Calculator
+          <NavButton id="calc-buy" onClick={(e) => NavBtnClick(e)}>
+            Calculator Buy
+          </NavButton>
+          <NavButton id="calc-sell" onClick={(e) => NavBtnClick(e)}>
+            Calculator Sell
           </NavButton>
         </NavListcontainer>
       </SidebarBody>

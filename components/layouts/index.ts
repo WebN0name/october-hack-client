@@ -107,7 +107,7 @@ export const DropdownBtn = styled.div`
   border: none;
   cursor: pointer;
   margin-left: 30px;
-  min-width: 160px;
+  min-width: 200px;
   text-align: center;
 `
 
@@ -115,7 +115,7 @@ export const DropdownContent = styled.div`
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   margin-left: 30px;
@@ -126,6 +126,11 @@ export const DropdownContent = styled.div`
 `
 
 export const Dropdown = styled.div`
+  &.search{
+    &:hover ${DropdownContent}{
+      display: none;
+    }
+  }
   position: relative;
   display: inline-block;
   &:hover ${DropdownContent}{
@@ -192,7 +197,28 @@ export const TableContainer = styled.div`
 `
 
 export const InputSearch = styled.input`
-    width: 40px;
+    width: 80px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+`
+
+export const SearchContent = styled.div`
+  &.search{
+    display: block
+  }
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 30px;
+  text-align: center;
+  max-height: 260px;
+  overflow-y: auto;
+  scrollbar-width: none;
 `
 
 

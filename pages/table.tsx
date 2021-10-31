@@ -6,9 +6,9 @@ import { useState } from 'react'
 export default function Table() {
   const [price, setPrice] = useState([])
   const getDataFromPeaker = async (value :  string) => {
-    const data = await axios.post('/api/getDataForTable', {Symbol: value})
-    console.log(data.data.data.data)
+    let data = await axios.post('/api/getDataForTable', {Symbol: value})
     setPrice(data.data.data.data)
+
   }
   return (
     <PageWrapper>
@@ -21,10 +21,10 @@ export default function Table() {
             <TableHeader>names</TableHeader>
             <TableHeader>prices</TableHeader>
           </tr>
-          {price.map((p) => (
+          {price.map((p: any) => (
             <tr>
-              <TableData height="40">{Object.keys(p)}</TableData>
-              <TableDataCenter height="40">{Object.values(p) + " USDT"}</TableDataCenter>
+              <TableData height="40">{p.platform}</TableData>
+              <TableDataCenter height="40">{p.price === null ? '-' : p.price}</TableDataCenter>
             </tr>
           ))}
         </TableBody>

@@ -120,7 +120,7 @@ export const DropdownContent = styled.div`
   z-index: 1;
   margin-left: 30px;
   text-align: center;
-  max-height: 90px;
+  max-height: 135px;
   overflow-y: auto;
   scrollbar-width: none;
 `
@@ -189,6 +189,10 @@ export const TableContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`
+
+export const InputSearch = styled.input`
+    width: 40px;
 `
 
 

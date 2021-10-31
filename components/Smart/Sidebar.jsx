@@ -35,10 +35,10 @@ export default function Sidebar() {
           </ControllButton>
         </CloseSidebarArea>
         <NavListcontainer>
-          <NavButton id="table" backgroundColor="#ffeb3b" onClick={(e) => NavBtnClick(e)}>
+          <NavButton id="table"  onClick={(e) => NavBtnClick(e)}>
             Table
           </NavButton>
-          <NavButton id="calc" backgroundColor="#ffeb3b" onClick={(e) => NavBtnClick(e)}>
+          <NavButton id="calc" onClick={(e) => NavBtnClick(e)}>
             Calculator
           </NavButton>
         </NavListcontainer>
